@@ -1,0 +1,126 @@
+/* Fonts */
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+.roboto-thin{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+.roboto-light{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+.roboto-bold{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+/* Sections */
+section{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#footer{
+    background: #5C5B60;
+}
+
+.active{
+    text-decoration: 3px solid #AA0809 underline;
+}
+
+/* Buttons */
+.btn{
+    letter-spacing: 0.2rem
+}
+.btn-light{
+    background: white !important;
+    padding: 1rem 2rem;
+    border-radius: 0px;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #AA0809;
+    border-color: #AA0809;
+    padding: 1rem 2rem;
+    border-radius: 0px;
+}
+
+/* Slider */
+.customDots{
+    bottom: -25px;
+    width: 100%;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    display: block;
+    padding: 0;
+}
+
+.customDots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: gainsboro;
+    padding: 5px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+}
+.customDots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+.customDots li button{
+    background: white;
+}
+.firstSlider li.slick-active button{
+    background: #AA0809;
+}
+
+.sliderPlugin{
+    max-width:100%;
+    
+    object-fit: contain;
+}
+
+
+/* Commons */
+.section-title{
+    margin-bottom: 20px;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color:rgb(151, 149, 149);
+}
+
+.gray-gradient {
+    background-image:
+      linear-gradient(
+        to right, 
+        rgb(168, 168, 168), #eeeeee
+      );
+  }
+  .gray-gradient-inverse {
+    background-image:
+      linear-gradient(
+        to left, 
+        rgb(206, 205, 205), #c5c5c5
+      );
+  }
+
+.ribbon{
+    height: 10px;
+    width: 100px;
+    background:#AA0809;
+    margin-bottom: 50px;
+}

@@ -1,0 +1,28 @@
+.history-component{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.history-title{
+    text-transform: uppercase;
+    margin: auto;
+    text-align: center;
+}
+.history-title h1{
+    font-size: 4rem;
+}
+.history-title span{
+    font-size: 1.4rem;
+}
+
+.history-body{
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.more-container{
+    width: 100%;
+    padding-top: 30px;
+}

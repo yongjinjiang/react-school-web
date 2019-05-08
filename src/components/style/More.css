@@ -1,0 +1,22 @@
+.more{
+    padding: 5px;
+    color: white;
+    background: #B71312;
+    width: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    float: left;
+    letter-spacing: 0.2rem;
+}
+.more span{
+    background: black;
+}
+.chevron{
+    padding: 5px;
+    width: 30px;
+    color: white;
+    background: #D75C5D;
+    text-align: center;
+    text-transform: uppercase;
+    float:left;
+}

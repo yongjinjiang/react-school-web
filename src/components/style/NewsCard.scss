@@ -1,0 +1,30 @@
+.newsCard{
+    margin-bottom: 20px;
+}
+.news-Image{
+    width: 100%;
+    min-height: 200px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.newsTitleBorder{
+    min-height: 80px;
+    background:#911515;
+    color: white;
+    text-transform: uppercase;
+
+    h1{
+        font-size: 2rem;
+        font-weight: 300;
+    }
+    h4{
+        font-weight: 100;
+        font-size: 1rem;
+
+    }
+    i{
+        font-size:2rem;
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,29 @@
+.footer-items{
+    font-family: 'Roboto';
+    color:white;
+    text-align: center;
+    ul{
+       list-style-type: none;
+       font-size: 1.2rem;
+       line-height: 3;
+
+       li i{
+           font-size: 2rem;
+           margin-right: 20px;
+       }
+    }
+}
+
+.etna-footer{
+    div{
+        bottom: 20px;
+    }
+    p{
+        font-size: 0.8rem;
+        font-family: 'Roboto';
+        line-height: 0.2;
+        color: white;
+        text-transform: uppercase;
+
+    }
+}
