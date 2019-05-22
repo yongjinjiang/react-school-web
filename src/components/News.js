@@ -1,7 +1,24 @@
 import React from 'react'
 import NewsCard from './NewsCard'
-import Noticias from '../data'
+import {newsOne as Noticias} from '../data';
+import faker from 'faker';
 import './style/News.scss'
+
+
+const generator = (schema, min = 1, max) => {
+    max = max || min
+    return Array.from({ length: faker.random.number({ min, max }) }).map(() => Object.keys(schema).reduce((entity, key) => {
+      entity[key] = faker.fake(schema[key])
+      return entity
+    }, {}))
+  }
+
+  const clientsSchema = {
+    ImageUrl: '{{image.imageUrl}}',
+    Title: 'Lorem Ipsum',
+    Date: '21/02/2015'
+  }
+  
 
 
 class News extends React.Component{
@@ -15,31 +32,20 @@ class News extends React.Component{
 
     componentDidMount(){
         setTimeout( () => {
-            this.setState({news: JSON.parse(Noticias)})
-            console.log(JSON.parse(Noticias))
+            this.setState({news: generator(clientsSchema, 4, 4)})
         },2000)
         
     }
     render(){
         
         return(
-            <section id="noticias">
-                <div className="container noticias">
-                    <div className="section-title">
-                        <h1>Noticias</h1>
-                    </div>
-                    <div className="ribbon"></div>
-                    <div className="row">
-
-                        <div className="clearfix"></div>
-                        <div className="col-md-12">
-                            {this.state.news.length === 0 ? <p>Loading...</p> : this.state.news.map(item =>
-                                <NewsCard info={item}/>
-                            )}
-                        </div>
-                    </div>
-                </div>
-            </section>
+             <div className="grid-noticias container">
+                {this.state.news.length === 0 ? <p>Loading...</p> : this.state.news.map(
+                    item =>
+                        <NewsCard  key={Math.random()} info={item}/>
+                    )
+                }
+             </div>
         );
 
     }

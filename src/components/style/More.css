@@ -1,18 +1,18 @@
 .more{
-    padding: 5px;
+    padding: 2px 10px 2px 10px;
     color: white;
+    font-weight: 800;
     background: #B71312;
-    width: 100px;
     text-align: center;
     text-transform: uppercase;
     float: left;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.3rem;
 }
 .more span{
     background: black;
 }
 .chevron{
-    padding: 5px;
+    padding: 2px 5px 2px 5px;
     width: 30px;
     color: white;
     background: #D75C5D;

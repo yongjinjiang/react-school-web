@@ -2,12 +2,13 @@ import React from 'react'
 import logoSlider from '../images/logo.png'
 import textSlider from '../images/textPrincipal.png'
 import {Button} from 'react-bootstrap';
+import './style/FirstSlider.scss'
 
 const firstSlider = () =>{
     return (
-        <div className="container" style={{paddingTop: "100px", paddingBottom:"50px"}}>
+        <div className="container firstSlider">
             <div className="row">
-                <div className="col-md-4 float-left">
+                <div className="col-md-4 float-left logo">
                     <img style={{margin: "auto"}} src={logoSlider}/>
                 </div>
                 <div className="col-md-8 float-left">

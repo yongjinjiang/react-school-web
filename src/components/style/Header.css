@@ -16,6 +16,7 @@
     font-weight: 700;   
     font-size: 15px;
     letter-spacing: 0.2rem;
+    cursor: pointer;
 }
 
 #navbarLinks a:hover{
@@ -24,4 +25,16 @@
 #navbarLinks a:active {
     border-bottom: solid 4px #911515;
 
+}
+
+@media (max-width: 990px) { 
+    #navbarLinks{
+        display: block;
+    }
+    #navbarLinks a {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+        width: 100%;
+    }
 }

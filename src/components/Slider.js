@@ -10,7 +10,7 @@ var settings = {
 
 const Slider = () =>{
     return(
-        <div className="gray-gradient firstSlider" style={{height: "70vh"}}>
+        <div className="gray-gradient firstSlider" style={{marginTop: "72px",height: "70vh"}}>
             <SliderPlugin {...settings}>
                 <div>
                     <FirstSlider/>

@@ -6,7 +6,7 @@ import Info from './Info'
 import Slider from './Slider'
 import School from './School'
 import Priority from './Priority'
-import SliderBoxBar from './SliderBoxBar'
+     import SliderBoxBar from './SliderBoxBar'
 import Aliances from './Aliances'
 import Footer from './Footer'
 import Contact from './Contact'
@@ -19,7 +19,7 @@ class Home extends React.Component {
     render(){
        return (
            <div>    
-               <Header/>
+               <Header style={{position:"fixed"}} />
                <section className="p-0" id="slider">
                     <Slider/>
                </section>

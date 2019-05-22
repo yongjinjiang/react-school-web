@@ -11,8 +11,8 @@ const Footer = () => {
                 </div>
                 <div className="col-md-12 col-lg-4 footer-items">
                     <ul>
-                        <li><i class="fas fa-phone-volume"></i> 0351 4647594</li>
-                        <li><i class="fas fa-map-marker-alt"></i> LOREM IMPSUM</li>
+                        <li><i className="fas fa-phone-volume"></i> 0351 4647594</li>
+                        <li><i className="fas fa-map-marker-alt"></i> LOREM IMPSUM</li>
                     </ul>
                 </div>
                 <div className="col-md-12 col-lg-4 etna-footer">

@@ -1,34 +1,67 @@
-import React from 'react'
-import SliderPlugin from "react-slick";
+import React, { useState } from "react";
+import ResizeObserver from "react-resize-observer";
+import "./style/SliderBoxBar.scss";
+const images = [
+  {
+    imageUrl: "https://dummyimage.com/250x250/000/fff"
+  },
+  {
+    imageUrl: "https://dummyimage.com/250x250/000/fff"
+  },
+  {
+    imageUrl: "https://dummyimage.com/250x250/000/fff"
+  },
+  {
+    imageUrl: "https://dummyimage.com/250x250/000/fff"
+  },
+  {
+    imageUrl: "https://dummyimage.com/250x250/000/fff"
+  },
+  {
+    imageUrl: "https://dummyimage.com/250x250/000/fff"
+  },
+  {
+    imageUrl: "https://dummyimage.com/250x250/000/fff"
+  },
+  {
+    imageUrl: "https://dummyimage.com/250x250/000/fff"
+  },
+  {
+    imageUrl: "https://dummyimage.com/250x250/000/fff"
+  },
+  {
+    imageUrl: "https://dummyimage.com/250x250/000/fff"
+  },
+  {
+    imageUrl: "https://dummyimage.com/250x250/000/fff"
+  },
+  {
+    imageUrl: "https://dummyimage.com/250x250/000/fff"
+  }
+];
 
-import './style/SliderBoxBar.scss'
+const SliderBoxBar = () => {
+  const [width, setWidth] = useState(250);
 
-const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 8,
-    slidesToScroll: 3
-  };
+  return (
+    <div className="containerBar" style={{ height: width, overflow:"hidden" }}>
+      <ResizeObserver
+        onResize={rect => {
+          let s = Math.round(rect.width / 250);
+          let x = rect.width / s;
+          setWidth(x);
+        }}
+      />
+      {images.map(image => (
+        <img
+          alt="dumb alt"
+          key={Math.random()}
+          width={width}
+          src={image.imageUrl}
+        />
+      ))}
+    </div>
+  );
+};
 
-const SliderBoxBar = () =>{
-    return (
-        <div className="SliderBoxBar">
-            <SliderPlugin {...settings}>
-                <img className="float-left"  src="https://dummyimage.com/250x250/919191/000000.jpg"/>
-                <img className="float-left"  src="https://dummyimage.com/250x250/919191/000000.jpg"/>
-                <img className="float-left"  src="https://dummyimage.com/250x250/919191/000000.jpg"/>
-                <img className="float-left"  src="https://dummyimage.com/250x250/919191/000000.jpg"/>
-                <img className="float-left"  src="https://dummyimage.com/250x250/919191/000000.jpg"/>
-                <img className="float-left"  src="https://dummyimage.com/250x250/919191/000000.jpg"/>
-                <img className="float-left"  src="https://dummyimage.com/250x250/919191/000000.jpg"/>
-                <img className="float-left"  src="https://dummyimage.com/250x250/919191/000000.jpg"/>
-                <img className="float-left"  src="https://dummyimage.com/250x250/919191/000000.jpg"/>
-                <img className="float-left"  src="https://dummyimage.com/250x250/919191/000000.jpg"/>
-                <img className="float-left"  src="https://dummyimage.com/250x250/919191/000000.jpg"/>
-                <img className="float-left"  src="https://dummyimage.com/250x250/919191/000000.jpg"/>
-            </SliderPlugin>
-        </div>
-    );
-}
 export default SliderBoxBar;

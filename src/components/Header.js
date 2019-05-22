@@ -9,10 +9,20 @@ import './style/Header.css'
 const Header = () => {
     return(
         <div style={{background:"#F8F9FA"}}>
-            <div className="container" >
-                <Navbar bg="light" id="navbar-header">
+            
+                <Navbar collapseOnSelect expand="lg" bg="light" id="navbar-header" fixed="top">
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                <div className="container" >
                     <div id="navbarLinks">
-                        <Link to='/'> Inicio</Link>
+                        <Anchor
+                            activeClass="active"
+                            to="/"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration= {500}
+                        > Inicio </Anchor>
                         <Anchor
                             activeClass="active"
                             to="historia"
@@ -30,7 +40,6 @@ const Header = () => {
                             duration= {500}
                         > Prioridades Inst. </Anchor>
                         <Anchor
-                            activeClass="active"
                             to="noticias"
                             spy={true}
                             smooth={true}
@@ -56,8 +65,12 @@ const Header = () => {
                         <Link to='/Niveles'> Niveles</Link>
                         
                     </div>
+                    </div>
+
+                
+                </Navbar.Collapse>
                 </Navbar>
-            </div>
+            
         </div>
     );
 }
