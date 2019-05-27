@@ -47,9 +47,12 @@ const SliderBoxBar = () => {
     <div className="containerBar" style={{ height: width, overflow:"hidden" }}>
       <ResizeObserver
         onResize={rect => {
-          let s = Math.round(rect.width / 250);
-          let x = rect.width / s;
-          setWidth(x);
+          let boxWanted = Math.round(rect.width / 250);
+          if(rect.width < 600){
+            boxWanted=4;
+          }
+          let widthOfBoxes = rect.width / boxWanted;
+          setWidth(widthOfBoxes);
         }}
       />
       {images.map(image => (

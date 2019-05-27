@@ -1,6 +1,6 @@
 import React from 'react'
 import More from './More'
-import './style/History.css'
+import './style/History.scss'
 
 const logoBar = require('../images/barLogo.png');
 

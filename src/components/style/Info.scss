@@ -51,3 +51,37 @@
     height: 94%;
     object-fit: cover;
 }
+
+@media (max-width: 990px) { 
+    .newsImage{
+        display:none;
+    }
+
+}
+@media (max-width: 690px) { 
+    .infoitem-number, .infoitem, .info-link{
+        width:unset !important;
+    }
+    
+}
+@media (max-width: 490px) { 
+   .infoitem{
+       margin:0;
+   }
+   .info-link{
+       padding: 0;
+       
+       .more-container{
+            padding: 0;
+        }
+        .more{
+            display: none;
+        }
+        .chevron{
+            min-height: 100px;
+            max-height: 100px;
+            line-height: 100px;
+        }
+   }
+   
+}

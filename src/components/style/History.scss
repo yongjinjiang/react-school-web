@@ -19,10 +19,17 @@
 
 .history-body{
     padding-top: 2rem;
-    text-align: center;
+    text-align: justify;
 }
 
 .more-container{
     width: 100%;
     padding-top: 30px;
+}
+
+
+@media (max-width: 990px) { 
+    .history-body{
+        padding: 20px;
+    }
 }

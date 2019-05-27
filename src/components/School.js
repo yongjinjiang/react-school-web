@@ -1,6 +1,6 @@
 import React from 'react'
 import SchoolCard from './SchoolCard'
-import './style/School.css'
+import './style/School.scss'
 
 const logoBar = require('../images/barLogo.png');
 
@@ -20,7 +20,7 @@ const Info = [
 
     },
     {
-        title:    "SERVICIO Y BIENESTAR INSTITUCIONAL",
+        title:    "BIENESTAR INSTITUCIONAL",
         background: "https://i0.wp.com/www.success.com/wp-content/uploads/2019/02/3-Keys-to-Developing-Daily-Disciplines.jpg?fit=1100%2C733&ssl=1"
 
     },
@@ -71,6 +71,7 @@ const School = () =>{
                     }
                 </div>
             </div>
+            <div className="clearfix"></div>
         </div>
 
     );

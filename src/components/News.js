@@ -1,54 +1,44 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import NewsCard from './NewsCard'
+import axios from 'axios';
 import {newsOne as Noticias} from '../data';
 import faker from 'faker';
 import './style/News.scss'
 
 
-const generator = (schema, min = 1, max) => {
-    max = max || min
-    return Array.from({ length: faker.random.number({ min, max }) }).map(() => Object.keys(schema).reduce((entity, key) => {
-      entity[key] = faker.fake(schema[key])
-      return entity
-    }, {}))
+  function useFetch(url) {
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
+    async function fetchUrl() {
+      const response = await fetch(url);
+      const json = await response.json();
+      setData(json);
+      setLoading(false);
+    }
+    useEffect(() => {
+      fetchUrl();
+    }, []);
+    return [data, loading];
   }
 
-  const clientsSchema = {
-    ImageUrl: '{{image.imageUrl}}',
-    Title: 'Lorem Ipsum',
-    Date: '21/02/2015'
-  }
-  
-
-
-class News extends React.Component{
-
-    constructor(props){
-        super(props);
-        this.state = {
-            news: []
-        }
-    }
-
-    componentDidMount(){
-        setTimeout( () => {
-            this.setState({news: generator(clientsSchema, 4, 4)})
-        },2000)
-        
-    }
-    render(){
-        
-        return(
-             <div className="grid-noticias container">
-                {this.state.news.length === 0 ? <p>Loading...</p> : this.state.news.map(
-                    item =>
-                        <NewsCard  key={Math.random()} info={item}/>
-                    )
-                }
-             </div>
-        );
-
-    }
+const News = () => {
+    const [data, loading] = useFetch(
+        "https://next.json-generator.com/api/json/get/NJ9cu8fp8"
+      );
+      return (
+        <>
+         
+          {loading ? (
+            "Loading..."
+          ) : (
+            <div className="grid-noticias container">
+              {data.map(item => (
+                <NewsCard  key={item._id} info={item}/>
+              ))}
+            </div>
+          )}
+        </>
+      );
     
 }
 

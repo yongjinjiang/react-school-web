@@ -7,12 +7,22 @@ const settings = {
     infinite: true,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 5
+    slidesToScroll: 5,
+    responsive:[
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+              
+        }
+    ]
   };
 
 const Aliances = () =>{
     return(
-        <div className="container">
+        <div className="container aliances">
                 <div className="aliance-title">
                     <h1>Alianzas Estrategicas</h1>
                 </div>

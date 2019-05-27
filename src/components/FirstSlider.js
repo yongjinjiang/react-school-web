@@ -8,13 +8,13 @@ const firstSlider = () =>{
     return (
         <div className="container firstSlider">
             <div className="row">
-                <div className="col-md-4 float-left logo">
+                <div className="col-md-12 col-lg-4 float-left logo">
                     <img style={{margin: "auto"}} src={logoSlider}/>
                 </div>
-                <div className="col-md-8 float-left">
+                <div className="col-md-12 col-lg-8 float-left text-sanjose">
                     <img style={{margin: "auto"}} src={textSlider}/>
                 </div>
-                <div style={{width:"100%", margin:"auto", textAlign:"center", marginTop:"50px", marginBottom:"50px"}}>
+                <div className="first-buttons" style={{width:"100%", margin:"auto", textAlign:"center", marginTop:"50px", marginBottom:"50px"}}>
                     <Button variant="light" size="lg" style={{marginRight:"50px", fontFamily:"'Roboto', sans-serif"}}>ACCESO FAMILIAS</Button>
                     <Button variant="danger" size="lg" style={{marginleft:"50px", fontFamily:"'Roboto', sans-serif"}}>ACCESO ALUMNOS</Button>
                 </div>

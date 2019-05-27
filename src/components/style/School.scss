@@ -1,0 +1,74 @@
+#cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+    overflow: hidden;
+    position: relative;
+
+}
+
+#cards div{
+    height: 300px;
+    text-align: center;
+
+}
+
+#cards img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+#cards div p {
+    margin-top: -150px;
+}
+#cards p span{
+    color:white;
+    padding:20px;
+    background: red;
+
+}
+
+.borderColor{
+    background: #E3E3E3;
+    height: 90vh;
+    width: 100%;
+    position: absolute;
+    margin-top: 400px;
+}
+@media (max-width: 790px) { 
+    .borderColor{
+        height: unset;
+    }
+    #cards{
+        padding: 20px;
+        margin-bottom: 50px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8,100px);
+        div{
+            text-align: unset;
+        }
+        .schoolCard{
+            img{
+                width: 30%;
+                float:left;
+                max-height: 100px;
+            }
+            p{
+                width: 70%;
+                float:left;
+                margin-top:0;
+                
+                span{
+                    float:left;
+                    line-height: unset;
+                    width: 100%;
+                    min-height: 100px;
+                }
+            }
+        }
+    }
+}
+   
+

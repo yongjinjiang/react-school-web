@@ -54,3 +54,18 @@
     }
 }
 
+@media (max-width: 460px) { 
+ .contact{
+     text-align: center;
+ }
+ .conctactImage{
+     padding:20px;
+     img{
+         width: 100%;
+     }
+ }
+
+ .contactForm{
+     padding: 20px;
+ }
+}

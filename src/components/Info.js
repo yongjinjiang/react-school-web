@@ -15,7 +15,7 @@ const Info = () => {
                 <div className="col-md-3 float-left newsImage">
                     <img src="https://www.lexiconn.in/wp-content/themes/lexiconn/images/project-report-writing-img.jpg" alt="news"/>
                 </div>
-                <div className="col-md-9 float-left">
+                <div className=" col-sd-12 col-md-12 col-lg-9 float-left">
                     <InfoItem number="1"/>
                     <InfoItem number="2"/>
                     <InfoItem number="3"/>
