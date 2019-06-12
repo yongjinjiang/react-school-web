@@ -6,17 +6,14 @@ import Info from './Info'
 import Slider from './Slider'
 import School from './School'
 import Priority from './Priority'
-     import SliderBoxBar from './SliderBoxBar'
+import SliderBoxBar from './SliderBoxBar'
 import Aliances from './Aliances'
 import Footer from './Footer'
 import Contact from './Contact'
 
-class Home extends React.Component {
-    constructor(props){
-        super(props);
-    }
+const Home = () => {
 
-    render(){
+    
        return (
            <div>    
                <Header style={{position:"fixed"}} />
@@ -54,6 +51,6 @@ class Home extends React.Component {
            </div>
        );
     }
-}
+
 
 export default Home;

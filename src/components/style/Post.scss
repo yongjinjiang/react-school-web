@@ -1,0 +1,33 @@
+.postContainer{
+   
+    margin-top: 70px;
+    min-height: 200px;
+    background: red;
+    
+    h1{
+        text-transform: uppercase;
+        color: white;
+        
+
+    }
+    i{
+        float: left;
+        padding: 20px;
+        background: white;
+        color:black;
+    
+        
+    }
+    .wave{
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+    }
+}
+.postBody{
+    text-align: justify;
+    color: black;   
+}
