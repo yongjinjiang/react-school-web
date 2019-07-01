@@ -12,11 +12,11 @@ const NewsCard = (props) =>{
                     <i className="fas fa-newspaper"></i>
                 </div>
                 <Link to={{
-                    pathname:'/noticia/'+ props.info._id,
+                    pathname:'/noticia/'+ props.info.Id,
                 }}>
                     <div className="col-md-10 text-news float-left">
-                        <h1>{props.info.title}</h1>
-                        <h4>{props.info.date}</h4>
+                        <h1>{props.info.Title}</h1>
+                        <h4>{props.info.Date}</h4>
                     </div>
                 </Link>
             </div>

@@ -24,8 +24,17 @@
 }
 
 .postBody{
-    margin-top:20px;
+    margin-top: 20px;
+    margin-bottom: 2rem;
     text-align: justify;
     color: black;   
+    h1{
+        text-align: left;
+    }
+    .postImage{
+        img{
+            width: 100%;
+        }
+    }
 }
 

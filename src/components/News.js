@@ -5,9 +5,9 @@ import './style/News.scss'
 
 const News = () => {
     const [data, loading] = useFetch(
-        "https://next.json-generator.com/api/json/get/NJ9cu8fp8"
+        "http://frontend.sistemaetna.com.ar/api/News?quantity=4"
       );
-   
+      
       return (
         <>
           {loading ? (
@@ -16,8 +16,8 @@ const News = () => {
             </div>
           ) : (
             <div className="grid-noticias container">
-              {data.map(item => (
-                <NewsCard key={item._id} type="news" info={item}/>
+              {data[0].News.map(item => (
+                <NewsCard key={item.Id} type="news" info={item}/>
               ))}
             </div>
           )}

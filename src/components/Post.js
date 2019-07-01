@@ -11,8 +11,9 @@ const Post = (props) => {
 
 
     const [data, loading] = useFetch(
-        "https://next.json-generator.com/api/json/get/EyDse5L0U"
+        "http://api.sistemaetna.com.ar/api/News/Detail?id=73&quantity=1"
     );
+    console.log("Data:", data)
     return (
         <div>
             <Header />
@@ -30,8 +31,16 @@ const Post = (props) => {
                     </div>)
                     :
                     (<>
-                        <h1>{data[0].title}</h1>
-                        <p>{data[0].content}</p>
+                    <div className="row">
+                        <div className="col-sm-12 col-md-6">
+                            <h1>{data.Title}</h1>
+                            <p>{data.Content}</p>
+                        </div>
+                        <div className="col-sm-12 col-md-6 postImage">
+                            <img src={data.ImageUrl}/>
+                        </div>
+                    </div>
+                        
                     </>
                     )
                 }
