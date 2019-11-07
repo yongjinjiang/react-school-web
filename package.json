@@ -2,7 +2,6 @@
   "name": "website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Canopix.github.io/react-school-web",
   "dependencies": {
     "axios": "^0.18.1",
     "bootstrap": "^4.3.1",
