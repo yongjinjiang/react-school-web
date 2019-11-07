@@ -46,5 +46,8 @@
     "color": "#00bfb5",
     "icon": null,
     "createdAt": 1557375482060
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
   }
 }
